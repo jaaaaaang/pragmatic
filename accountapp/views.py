@@ -4,4 +4,4 @@ from django.shortcuts import render
 # Create your views here.
 
 def hello_world(request):
-    return HttpResponse('account_views 에서 만든 첫번째 화면 !!')
+    return render(request, 'base.html')
