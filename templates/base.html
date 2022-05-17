@@ -6,11 +6,11 @@
 <body>
     {% include 'header.html' %}
     <!-- 이걸 3개 만들어서 헤드-바디-푸터 영역을 나누는걸 설명했음  <div style="height: 20rem; background-color: #38df81; border-radius: 1rem; margin: 2rem;"></div>-->
-
+<hr>   <!-- 구분 선 삽입-->
     <!-- extend를 사용하기 위해서 block 구문을 사용-->
     {% block content %}
     {% endblock %}
-
+<hr>
     {% include 'footer.html' %}
 </body>
 </html>
