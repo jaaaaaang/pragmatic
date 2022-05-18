@@ -1,3 +1,4 @@
+from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
 from accountapp.views import hello_world, test, AccountCreateView
 
@@ -11,4 +12,6 @@ urlpatterns = [
     #path('', hello_world, name = 'hello_world'),
     path('test/', test, name = 'test'),
     path('create/', AccountCreateView.as_view(), name='create'),  #view.py에서 class를 사용한 경우 .as_view()를 붙여주라
+    path('login/', LoginView.as_view(template_name='accountapp/login.html'), name='login'), #template 설정을 해줘야 함
+    path('logout/', LogoutView.as_view(), name='logout')
 ]
